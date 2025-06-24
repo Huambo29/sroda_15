@@ -9,7 +9,7 @@ def time_phase(last_time: float, message: str):
 	return time_now
 
 def is_good_for_encoding(word: str, popularity: int):
-	return not all(map(lambda x: x.isnumeric(), word)) and popularity > 1
+	return not all(map(lambda x: x.isnumeric(), word)) and popularity > 1 and len(word) > 4
 
 def count_popularity(contents: str):
 	result = {}

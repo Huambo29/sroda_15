@@ -11,7 +11,7 @@ fn time_phase(instant: &mut Instant, message: &str) {
 }
 
 fn is_good_for_encoding(word: &str, popularity: u32) -> bool {
-	!word.chars().all(|x| x.is_numeric()) && popularity > 1
+	!word.chars().all(|x| x.is_numeric()) && popularity > 1 && word.len() > 4
 }
 
 fn count_popularity(contents: &String) -> HashMap<String, u32> {
